@@ -1,0 +1,67 @@
+/* --- PASSO 3.1: CSS Grid no BODY --- */
+body {
+  margin: 0;
+  display: grid;
+  
+  /* Define as colunas: 1 fracionária para o main e outra para a barra lateral (ex: 200px) */
+  grid-template-columns: 1fr 200px;
+  
+  /* Define as linhas do cabeçalho, conteúdo e rodapé */
+  grid-template-rows: auto 1fr auto;
+  
+  /* Mapeia a posição de cada elemento semântico no layout Santo Graal */
+  grid-template-areas:
+    "header  header"
+    "main    aside"
+    "footer  footer";
+    
+  min-height: 100vh;
+  font-family: Arial, sans-serif; /* PASSO 3.3: Sua escolha de fonte */
+}
+
+/* Nomeando os elementos para encaixar nas áreas do Grid */
+header {
+  grid-area: header;
+  background-color: #333; /* Escolha de cores */
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+aside {
+  grid-area: aside;
+  padding: 1rem;
+  background-color: #e2e2e2;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/*PASSO 3.2: CSS Flexbox no Menu de Navegação (<nav>)*/
+nav {
+  display: flex;
+  justify-content: space-around; /* Distribui os links lado a lado com espaçamento */
+  align-items: center;
+  background-color: #444;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #555;
+}
