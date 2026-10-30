@@ -54,7 +54,7 @@ nav a:hover {
 
 /* Main e Layout Grid */
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 10px;
 }
@@ -67,7 +67,7 @@ main h1 {
 /* CSS Grid para os cartões */
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 20px;
 }
 
