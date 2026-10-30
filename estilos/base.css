@@ -1,8 +1,131 @@
-body {font-family: 'Roboto', sans-serif; font-weight: 400;}
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-h1 {font-weight: 100;}
+body {
+    font-family: 'Roboto', sans-serif; font-weight: 400;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-footer {font-family: 'Playfair Display', serif;}
+h2 {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    margin-bottom: 10px;
+}
 
-span {display: block;}
-nav {display: flex;}
+/* Header */
+header {
+    background-color: #1b4965;
+    color: white;
+    text-align: center;
+}
+
+#titulo-curso {
+    display: block;
+    font-size: 1.2rem;
+    padding: 15px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2b2d42;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #8d99ae;
+    color: #000;
+}
+
+/* Main e Layout Grid */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* CSS Grid para os cartões */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+}
+
+/* Cartões (Cards) */
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    background-color: #1b4965;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bio-container, .local-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.card ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #1b4965;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#ultimaModificacao {
+    color: #ffeb3b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
