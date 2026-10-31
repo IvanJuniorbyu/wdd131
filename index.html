@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Fundamentos da Web Dinâmica - Ivan Junior</title>
+  <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Página de perfil e projetos de Ivan Junior.">
+  <meta name="author" content="Ivan Junior"> 
     
-    <title>WDD 131 – Fundamentos da Web Dinâmica - Seu Nome Completo</title>
-    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica - Seu Nome Completo - Página inicial do curso contendo biografia, recursos de desenvolvimento web e dados dinâmicos.">
-    <meta name="author" content="Seu Nome Completo">
-    <link rel="stylesheet" href="estilos/base.css">
-    <script src="scripts/obterdatas.js" defer></script>
+  <link rel="stylesheet" href="estilos/base.css">
+  <script src="scripts/obterdatas.js" defer></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <span id="titulo-curso">WDD 131: Fundamentos da Web Dinâmica</span>
-        <nav>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures?lang=por" target="_blank">Escritura</a>
-            <a href="#">Projeto Final</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Seu Nome Completo</h1>
-        
-        <section class="card">
-            <h2>Sobre Mim</h2>
-            <div class="bio-container">
-                <p>Olá, meu nome é Ivan Rodrigues Silva Junior, mas pode me chamar só de Ivan. Nasci em sumaré, São Paulo, atualmente sou casado e Trabalho como operador de máquina. Estou buscando uma recolocação no mercado de trabalho na área de tecnologia. Em minhas horas vagas eu gosto de passar um tempo de qualidade com minha esposa, desenhar e jogar video games.</p>
-                <img src="imagens/foto-de-perfil-2.jpg" alt="Foto de Seu Nome" width="150">
-            </div>
-            <h3>Sumaré, São Paulo - Brasil</h3>
-            <div class="local-container">
-                <img src="imagens/bandeira-do-brasil.jpg" alt="Bandeira do Estado ou País" width="100">
-                <p>Sumaré é localizada no coração da Região Metropolitana de Campinas, a apenas 120 km da capital, Sumaré é um grande polo de desenvolvimento com a hospitalidade típica do interior. Graças à sua localização próxima as rodovias Anhanguera e Bandeirantes, se tornou uma casa de gigantes mundiais como a Honda e a 3M. Isso faz com que o município tenha uma economia multibilionária e forte magnetismo para novos negócios.</p>
-            </div>
-        </section>
+  <header>
+    <span id="titulo-curso">WDD131 – Fundamentos da Web Dinâmica</span>
+    <nav>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">Linkedin</a>
+        <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank" rel="noopener">Escritura</a>
+        <a href="#">Projeto Final</a>
+    </nav>
+  </header>
 
-        <section class="card">
-            <h2>Recursos Web Dev</h2>
-            <ul>
-                <li><a href="https://dev.to" target="_blank">Comunidade Dev.to</a></li>
-                <li><a href="https://www.smashingmagazine.com" target="_blank">Revista Smashing</a></li>
-                <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
-                <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
-            </ul>
-        </section>
-    </main>
+  <main>
+    <h1>Ivan Rodrigues Silva Junior</h1>
+    <section class="card">
+        <h2>Sobre Mim</h2>
+        <div class="conteudo-sobre">
+          <img src="imagens/foto-de-perfil-2.jpg" alt="Foto de Ivan Junior" class="foto-perfil" width="150" height="150">
+          <p>Olá! Meu nome é Ivan Junior, tenho 35 anos e sou casado. Sou natural de Sumaré - São Paulo, mas atualmente moro em Utah, nos Estados Unidos. Sou estudante do curso WDD 131 – Fundamentos da Web Dinâmica e estou animado para aprender mais sobre desenvolvimento web.</p>
+        </div>
 
-    <footer>
-        <p>&copy;<span id="anoatual"></span> - Ivan Rodrigues Silva Junior - Sumaré, São Paulo - Brasil</p>
-        <p id="ultimaModificacao"></p>
-    </footer>
+        <h2>Interesses</h2>
+        <p>Em meu tempo livre, gosto de ler livros de ficção científica, jogar video games e praticar esportes. Também sou fascinado por tecnologia e inovação.</p>
+    </section>
+
+    <section class="card">
+        <h2>Links Interessantes</h2>
+        <a href="#">Autosuficiência</a>
+        <a href="#">Escrituras</a>
+        <a href="#">Tecnologia</a>
+        <a href="#">Jogos</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anoatual"></span> Ivan Rodrigues Silva Junior. São Paulo, Brasil.</p>
+    <p id="ultimaModificacao"></p>
+  </footer>  
+
 </body>
 </html>
