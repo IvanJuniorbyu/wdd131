@@ -1,0 +1,136 @@
+/*Paramentros iniciais (fiz para padronizar a página)*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --principal: #c59451;
+    --secundaria: #dac470;
+    --terciaria: #383838;
+    --corpo: #d5d6db;
+    --text1: #1a1a1c;
+    --text2: #e7e7e7;
+}
+
+/*Fontes*/
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.google-sans-h1 {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*EDIÇÕES*/
+
+#menu {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text2);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+  list-style: none;
+  background-color: var(--terciaria);
+  gap: 0;
+}
+
+.navigation.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text2);
+  padding: 0.5rem 1rem;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+
+.navigation a:hover {
+  color: var(--secundaria);
+  border-color: var(--secundaria);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+   
+
+body {
+    background-color: var(--corpo);
+    color: var(--text1);
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--principal);
+    color: var(--text2);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--principal);
+    color: var(--text2);
+    padding: 1rem;
+    text-align: center;
+}
+
+figure {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+figure img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  padding: 0.7rem;
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
