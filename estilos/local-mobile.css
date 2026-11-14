@@ -33,6 +33,24 @@ header {
     display: block;
 }
 
+ul {
+    list-style: none;
+}
+
+.data li, .clima p {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+strong {
+    text-align: right;
+}
+
+.valor {
+    text-align: left;
+}
+
 .data {
     text-align: center;
     margin: 20px 0;
