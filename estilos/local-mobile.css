@@ -5,8 +5,8 @@
 }
 
 :root {
-    --cor-principal: #3498db;
-    --cor-secundaria: #2ecc71;
+    --cor-principal: #2f04ee;
+    --cor-secundaria: #17ae23;
     --cor-fundo: #f5f5f5;
     --cor-texto: #333;
     --font-titulo: 'google-sans', sans-serif;
@@ -23,7 +23,7 @@ header {
     text-align: center;
     padding: 20px;
     background-color: var(--cor-principal);
-    color: var(--cor-texto);
+    color: var(--cor-fundo);
     border-bottom: 20px solid var(--cor-secundaria);
 }
 
@@ -72,5 +72,5 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: var(--cor-principal);
-    color: var(--cor-texto);
+    color: var(--cor-fundo);
 }

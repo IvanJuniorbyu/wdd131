@@ -1,4 +1,13 @@
 @media (min-width: 768px) {
+    :root {
+        --cor-principal: #2f04ee;
+        --cor-caixa: #f6ff0091;
+        --cor-secundaria: #17ae23;
+        --cor-fundo: #f5f5f5;
+        --cor-fundo-transparente: #f5f5f585;
+        --cor-texto: #333;
+    }
+
     /* 1. Layout Principal */
     main {
         position: relative;
@@ -13,7 +22,7 @@
     /* 2. Imagem de Fundo (Hero) */
     .hero {
         position: absolute;
-        inset: 0; /* Atalho limpo para top, left, width e height 100% */
+        inset: 0;
         z-index: 1;
     }
 
@@ -31,10 +40,10 @@
         z-index: 2;
         width: 60%;
         max-width: 320px;
-        background-color: rgba(255, 255, 255, 0.62);
+        background-color: var(--cor-fundo-transparente);
         backdrop-filter: blur(5px);
         border-radius: 10px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra corrigida */
         font-size: small;
         border-bottom: none;
         padding-bottom: 10px;
@@ -54,7 +63,7 @@
     /* Cabeçalhos e Ícones dos Cartões */
     .data h2, 
     .clima h2 {
-        background-color: rgb(144, 144, 208);
+        background-color: var(--cor-caixa);
         padding: 10px;
         font-size: medium;
         border-top-left-radius: 10px;
