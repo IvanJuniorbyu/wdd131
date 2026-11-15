@@ -73,4 +73,14 @@
     .clima-icon {
         width: 40px;
     }
+
+    .data h2::after, .clima h2::after { 
+        content: " 📍"; /* Adiciona um emoji ou símbolo decorativo automaticamente */
+        font-size: 0.9rem;
+    }
+
+    /* O ícone do clima SVG fica visível SOMENTE na versão móvel, logo some no desktop (Critério 5) */
+    .clima-icon {
+        display: none;
+    }
 }
