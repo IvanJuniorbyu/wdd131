@@ -74,3 +74,8 @@ footer {
     background-color: var(--cor-principal);
     color: var(--cor-fundo);
 }
+
+.data h2::after, .clima h2::after { 
+    content: " 📍"; /* Adiciona um emoji ou símbolo decorativo automaticamente */
+    font-size: 0.9rem;
+}
