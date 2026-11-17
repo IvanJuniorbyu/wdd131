@@ -11,24 +11,25 @@ const lastModifiedParagraph = document.querySelector("#lastModified");
 lastModifiedParagraph.textContent = `Última modificação: ${document.lastModified}`;
 
 
-// 1. Função que calcula o windchill em Celsius
-function calculateWindChill(temp, windSpeed) {
-    const calc = 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
-    return calc.toFixed(1); // Arredonda para 1 casa decimal
-}
 
-// 2. Valores estáticos de teste (ou obtidos dos elementos da sua página)
-// Dica: No futuro, você pode ler esses valores diretamente dos elementos HTML .valor da sua seção de clima
-const temperaturaCelsius = 8; // Exemplo: 8°C
-const velocidadeVento = 15;   // Exemplo: 15 km/h
 
-// 3. Elemento HTML onde o resultado será exibido
+// 1. Captura os valores diretamente do HTML
+const tempElement = document.querySelector("#temp");
+const windElement = document.querySelector("#vento");
+
+// 2. Converte o texto extraído para número usando parseFloat
+const temperatura = parseFloat(tempElement.textContent);
+const velocidadeVento = parseFloat(windElement.textContent);
+
+// 3. Função de cálculo do Windchill (Celsius) em uma única linha, exigida pela rubrica
+const calcularSensacaoTermica = (temp, wind) => (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(1);
+
+// 4. Seleciona o elemento onde o resultado será inserido
 const windchillElement = document.querySelector("#windchill");
 
-// 4. Verificação das condições exigidas pelo projeto (Temperatura <= 10°C e Vento > 4.8 km/h)
-if (temperaturaCelsius <= 10 && velocidadeVento > 4.8) {
-    const resultado = calculateWindChill(temperaturaCelsius, velocidadeVento);
-    windchillElement.textContent = `${resultado} °C`;
+// 5. A função SÓ É CHAMADA se as condições forem atendidas
+if (temperatura <= 10 && velocidadeVento > 4.8) {
+    windchillElement.textContent = `${calcularSensacaoTermica(temperatura, velocidadeVento)} °C`;
 } else {
     windchillElement.textContent = "N/A";
 }
