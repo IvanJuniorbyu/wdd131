@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px auto;
+}
+
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #222
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.title {
+    text-align: center;
+    background-color: #222;
+}
+
+thead th {
+    background-color: rgb(22, 150, 93);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #f4f6f8;
+}
+
+tbody tr:hover {
+    background-color: #e2e8f0;
+}
