@@ -32,7 +32,6 @@ function renderSections(sections) {
   );
   tbody.innerHTML = html.join("");
 }
-
 // ⚠️ ESSAS DUAS LINHAS SÃO ESSENCIAIS PARA EXECUTAR AS FUNÇÕES:
 setCourseInformation(aCourse);
 renderSections(aCourse.sections);
