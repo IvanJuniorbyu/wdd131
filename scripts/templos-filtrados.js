@@ -122,7 +122,7 @@ const listaNavegacao = document.querySelector(".navigation");
 function exibirTemplos(listaDeTemplos) {
   container.innerHTML = "";
 
-  listaDeTemplos.forEach((templo) => {
+  listaDeTemplos.forEach((templo, index) => {
     const cartao = document.createElement("section");
     cartao.classList.add("temple-card");
 
@@ -141,10 +141,13 @@ function exibirTemplos(listaDeTemplos) {
     const imagem = document.createElement("img");
     imagem.src = templo.urlDaImagem;
     imagem.alt = templo.nomeDoTemplo;
-    imagem.loading = "lazy";
+    imagem.width = 400;
+    imagem.height = 250;
+    imagem.loading = index < 3 ? "eager" : "lazy";
 
     cartao.append(nome, local, data, tamanho, imagem);
     container.appendChild(cartao);
+    
   });
 }
 
@@ -176,6 +179,8 @@ linksNavegacao.forEach((link) => {
     navigation.classList.remove("open");
     menuButton.textContent = "☰";
   });
+
 });
+
 
 exibirTemplos(templos);
