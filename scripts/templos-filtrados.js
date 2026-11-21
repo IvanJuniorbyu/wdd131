@@ -113,11 +113,11 @@ const templos = [
   // Adicione mais objetos de templos aqui...
 ];
 
-//selecionando elementos DOM
+// Selecionando elementos DOM
 const container = document.querySelector(".container");
-const linksNavegacao = document.querySelectorAll(".navigation a")
-const botaoMenu = document.querySelector("#menu")
-const listaNavegacao = document.querySelector(".navigation")
+const linksNavegacao = document.querySelectorAll(".navigation a");
+const botaoMenu = document.querySelector("#menu");
+const listaNavegacao = document.querySelector(".navigation");
 
 function exibirTemplos(listaDeTemplos) {
   container.innerHTML = "";
@@ -135,9 +135,8 @@ function exibirTemplos(listaDeTemplos) {
     const data = document.createElement("p");
     data.innerHTML = `<span class="label">Consagração:</span> ${templo.consagracao}`;
 
-    const areaEmMetros = Math.round(templo.area * 0.092903);
     const tamanho = document.createElement("p");
-    tamanho.innerHTML = `<span class="label">Área:</span> ${areaEmMetros.toLocaleString("pt-BR")} m²`;
+    tamanho.innerHTML = `<span class="label">Área:</span> ${templo.area.toLocaleString("en-US")} sq ft`;
 
     const imagem = document.createElement("img");
     imagem.src = templo.urlDaImagem;
@@ -154,18 +153,22 @@ linksNavegacao.forEach((link) => {
     event.preventDefault();
     const textoFiltro = link.textContent.trim().toLowerCase();
 
-    if (textoFiltro === "página inicial") {
+    if (textoFiltro === "página inicial" || textoFiltro === "início") {
       exibirTemplos(templos);
-    } else if (textoFiltro === "antigo") {
-      const antigos = templos.filter((templo) => parseInt(templo.consagracao.slice(0, 4), 10) < 1900);
+    } else if (textoFiltro === "antigo" || textoFiltro === "antigos") {
+      const antigos = templos.filter(
+        (templo) => parseInt(templo.consagracao.slice(0, 4), 10) < 1900
+      );
       exibirTemplos(antigos);
-    } else if (textoFiltro === "novo") {
-      const novos = templos.filter((templo) => parseInt(templo.consagracao.slice(0, 4), 10) > 2000);
+    } else if (textoFiltro === "novo" || textoFiltro === "novos") {
+      const novos = templos.filter(
+        (templo) => parseInt(templo.consagracao.slice(0, 4), 10) > 2000
+      );
       exibirTemplos(novos);
-    } else if (textoFiltro === "pequeno") {
+    } else if (textoFiltro === "pequeno" || textoFiltro === "pequenos") {
       const pequenos = templos.filter((templo) => templo.area < 10000);
       exibirTemplos(pequenos);
-    } else if (textoFiltro === "grande") {
+    } else if (textoFiltro === "grande" || textoFiltro === "grandes") {
       const grandes = templos.filter((templo) => templo.area > 90000);
       exibirTemplos(grandes);
     }
